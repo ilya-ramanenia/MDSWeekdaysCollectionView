@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MDSWeekdaysCollectionView_Example' do
+  pod 'MDSWeekdaysCollectionView', :path => '../'
+
+  target 'MDSWeekdaysCollectionView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
