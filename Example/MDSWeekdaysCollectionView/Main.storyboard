@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weekdays Delegate-->
         <scene sceneID="wQg-tq-qST">
             <objects>
                 <viewController id="whP-gf-Uak" customClass="MDSViewController" sceneMemberID="viewController">
@@ -16,12 +17,95 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected weekdays:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40l-55-JnF">
+                                <rect key="frame" x="230.5" y="185" width="139.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="clip" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="trl-6t-9FP">
+                                <rect key="frame" x="282" y="213" width="36" height="142.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekdays mask:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2z-fG-Nw2">
+                                <rect key="frame" x="40" y="390" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dec:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YN-pS-MWA">
+                                <rect key="frame" x="40" y="419" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bin:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AU7-tH-IZR">
+                                <rect key="frame" x="47" y="442" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhN-WD-Inv">
+                                <rect key="frame" x="91" y="423" width="32.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTR-fB-JL1">
+                                <rect key="frame" x="91" y="446.5" width="32.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ep-hK-MiF" customClass="MDSWeekdaysCollectionView">
+                                <rect key="frame" x="40" y="70" width="520" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="xG3-XA-B9g"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="customDayBackgroundColor">
+                                        <color key="value" red="0.0" green="0.58823529409999997" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="weekdaysDelegate" destination="whP-gf-Uak" id="SgZ-n1-cQi"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AU7-tH-IZR" firstAttribute="trailing" secondItem="0YN-pS-MWA" secondAttribute="trailing" id="0af-Dk-3u2"/>
+                            <constraint firstItem="B2z-fG-Nw2" firstAttribute="top" secondItem="1ep-hK-MiF" secondAttribute="bottom" constant="220" id="1cr-E7-G2A"/>
+                            <constraint firstItem="0YN-pS-MWA" firstAttribute="top" secondItem="B2z-fG-Nw2" secondAttribute="bottom" constant="8" id="4TP-p2-ZQw"/>
+                            <constraint firstItem="YhN-WD-Inv" firstAttribute="leading" secondItem="0YN-pS-MWA" secondAttribute="trailing" constant="15" id="6oh-qT-V1v"/>
+                            <constraint firstItem="trl-6t-9FP" firstAttribute="centerX" secondItem="40l-55-JnF" secondAttribute="centerX" id="Fls-Kc-X18"/>
+                            <constraint firstItem="40l-55-JnF" firstAttribute="top" secondItem="1ep-hK-MiF" secondAttribute="bottom" constant="15" id="Fma-Qm-l6e"/>
+                            <constraint firstItem="XTR-fB-JL1" firstAttribute="leading" secondItem="YhN-WD-Inv" secondAttribute="leading" id="Hbo-aI-D36"/>
+                            <constraint firstItem="XTR-fB-JL1" firstAttribute="baseline" secondItem="AU7-tH-IZR" secondAttribute="baseline" id="NBU-B1-qp1"/>
+                            <constraint firstItem="0YN-pS-MWA" firstAttribute="leading" secondItem="B2z-fG-Nw2" secondAttribute="leading" id="OrE-hM-7iT"/>
+                            <constraint firstItem="YhN-WD-Inv" firstAttribute="baseline" secondItem="0YN-pS-MWA" secondAttribute="baseline" id="PLw-BD-ySM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1ep-hK-MiF" secondAttribute="trailing" constant="20" id="a2F-jJ-6Tu"/>
+                            <constraint firstItem="40l-55-JnF" firstAttribute="centerX" secondItem="1ep-hK-MiF" secondAttribute="centerX" id="e39-6v-H3C"/>
+                            <constraint firstItem="trl-6t-9FP" firstAttribute="top" secondItem="40l-55-JnF" secondAttribute="bottom" constant="10" id="h7x-yS-fcd"/>
+                            <constraint firstItem="AU7-tH-IZR" firstAttribute="top" secondItem="0YN-pS-MWA" secondAttribute="bottom" constant="2" id="obo-ER-Z1y"/>
+                            <constraint firstItem="1ep-hK-MiF" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="20" id="onf-aN-2n4"/>
+                            <constraint firstItem="B2z-fG-Nw2" firstAttribute="leading" secondItem="1ep-hK-MiF" secondAttribute="leading" id="uci-1G-UBW"/>
+                            <constraint firstItem="1ep-hK-MiF" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="50" id="yjK-M7-5k2"/>
+                            <constraint firstItem="1ep-hK-MiF" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="yzI-Jk-lpL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="binaryMaskLabel" destination="XTR-fB-JL1" id="BYq-4j-3IA"/>
+                        <outlet property="decimalMaksLabel" destination="YhN-WD-Inv" id="jgb-dR-8ED"/>
+                        <outlet property="selectedWeekdaysLabel" destination="trl-6t-9FP" id="qFr-Sa-lmd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="-507" y="394"/>
         </scene>
     </scenes>
 </document>

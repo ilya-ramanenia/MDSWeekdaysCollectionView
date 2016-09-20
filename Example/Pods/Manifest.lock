@@ -1,0 +1,16 @@
+PODS:
+  - MDSWeekdaysCollectionView (0.1.0)
+
+DEPENDENCIES:
+  - MDSWeekdaysCollectionView (from `../`)
+
+EXTERNAL SOURCES:
+  MDSWeekdaysCollectionView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MDSWeekdaysCollectionView: f3f58d4dfa342bec9480e0acb933acdaa62aecb9
+
+PODFILE CHECKSUM: 38b3b9f233c51efc277bfce7bf794b2d857f6006
+
+COCOAPODS: 1.0.1

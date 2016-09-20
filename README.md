@@ -1,6 +1,5 @@
 # MDSWeekdaysCollectionView
 
-[![CI Status](http://img.shields.io/travis/Andrei Ollykainen/MDSWeekdaysCollectionView.svg?style=flat)](https://travis-ci.org/Andrei Ollykainen/MDSWeekdaysCollectionView)
 [![Version](https://img.shields.io/cocoapods/v/MDSWeekdaysCollectionView.svg?style=flat)](http://cocoapods.org/pods/MDSWeekdaysCollectionView)
 [![License](https://img.shields.io/cocoapods/l/MDSWeekdaysCollectionView.svg?style=flat)](http://cocoapods.org/pods/MDSWeekdaysCollectionView)
 [![Platform](https://img.shields.io/cocoapods/p/MDSWeekdaysCollectionView.svg?style=flat)](http://cocoapods.org/pods/MDSWeekdaysCollectionView)
@@ -22,7 +21,7 @@ pod "MDSWeekdaysCollectionView"
 
 ## Author
 
-Andrei Ollykainen, andrik.fin@gmail.com
+Modus, mod.us
 
 ## License
 

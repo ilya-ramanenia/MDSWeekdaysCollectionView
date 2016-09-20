@@ -141,9 +141,9 @@
 		6003F593195388D20070C39A /* Example for MDSWeekdaysCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F59C195388D20070C39A /* MDSAppDelegate.h */,
 				6003F59D195388D20070C39A /* MDSAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* MDSViewController.h */,
 				6003F5A6195388D20070C39A /* MDSViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,

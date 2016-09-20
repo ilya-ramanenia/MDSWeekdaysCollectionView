@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MDSWeekdaysCollectionView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MDSWeekdaysCollectionView.'
+  s.summary          = 'CollectionView subcluss to work with weekdays selection'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,12 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/MDSWeekdaysCollectionView'
+  s.homepage         = 'https://github.com/JJCOINCWEBDEV/MDSWeekdaysCollectionView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Andrei Ollykainen' => 'andrik.fin@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/MDSWeekdaysCollectionView.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Modus' => 'mod.us' }
+  s.source           = { :git => 'https://github.com/JJCOINCWEBDEV/MDSWeekdaysCollectionView.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
@@ -37,6 +36,5 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # s.frameworks = 'UIKit',
 end

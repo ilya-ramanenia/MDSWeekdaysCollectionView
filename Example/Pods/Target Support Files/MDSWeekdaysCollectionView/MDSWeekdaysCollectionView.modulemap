@@ -1,0 +1,6 @@
+framework module MDSWeekdaysCollectionView {
+  umbrella header "MDSWeekdaysCollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}
