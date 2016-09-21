@@ -4,11 +4,18 @@
 [![License](https://img.shields.io/cocoapods/l/MDSWeekdaysCollectionView.svg?style=flat)](http://cocoapods.org/pods/MDSWeekdaysCollectionView)
 [![Platform](https://img.shields.io/cocoapods/p/MDSWeekdaysCollectionView.svg?style=flat)](http://cocoapods.org/pods/MDSWeekdaysCollectionView)
 
+<img src="https://github.com/JJCOINCWEBDEV/MDSWeekdaysCollectionView/tree/master/gifs/weekdayssetup.gif" alt="RESideMenu Screenshot" width="404" height="720" />
+<img src="https://raw.githubusercontent.com/romaonthego/RESideMenu/master/Demo.gif?2/weekdays.gif" alt="RESideMenu Screenshot" width="404" height="720" />
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+Apple LLVM compiler
+iOS 8.0 or higher
+ARC
 
 ## Installation
 
@@ -17,6 +24,17 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "MDSWeekdaysCollectionView"
+```
+
+## Usage
+
+Assign `MDSWeekdaysCollectionViewDelegate` to `weekdaysDelegate` property and receive the following messages:
+
+```objective-c
+
+@optional
+- (BOOL)weekdaysCollectionView:(MDSWeekdaysCollectionView *)collectionView shouldSelectWeekday:(NSInteger)weekday;
+- (void)weekdaysCollectionView:(MDSWeekdaysCollectionView *)collectionView didSelectWeekdaysMask:(MDSWeekdaysMask)weekdaysMask;
 ```
 
 ## Author
