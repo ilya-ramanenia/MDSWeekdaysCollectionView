@@ -4,8 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/MDSWeekdaysCollectionView.svg?style=flat)](http://cocoapods.org/pods/MDSWeekdaysCollectionView)
 [![Platform](https://img.shields.io/cocoapods/p/MDSWeekdaysCollectionView.svg?style=flat)](http://cocoapods.org/pods/MDSWeekdaysCollectionView)
 
-<img src="https://github.com/JJCOINCWEBDEV/MDSWeekdaysCollectionView/tree/master/gifs/weekdayssetup.gif" alt="RESideMenu Screenshot" width="404" height="720" />
-<img src="https://raw.githubusercontent.com/romaonthego/RESideMenu/master/Demo.gif?2/weekdays.gif" alt="RESideMenu Screenshot" width="404" height="720" />
+<img src="https://github.com/JJCOINCWEBDEV/MDSWeekdaysCollectionView/blob/master/gifs/weekdays.gif" alt="Weekdays collection view" width="404" height="720" />
+<img src="https://github.com/JJCOINCWEBDEV/MDSWeekdaysCollectionView/blob/master/gifs/weekdayssetup.gif" alt="Installation" width="1068" height="720" />
 
 ## Example
 
