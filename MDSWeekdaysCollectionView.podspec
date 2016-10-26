@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MDSWeekdaysCollectionView'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'CollectionView subcluss to work with weekdays selection'
   s.description      = 'Convenient collection view subclass to work with weekdays selection, providing such features like weekdays binary mask'
 
