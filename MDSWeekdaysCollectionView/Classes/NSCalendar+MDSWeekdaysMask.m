@@ -48,7 +48,7 @@ static NSString * const MDSWeekdaysLocale = nil;
 }
 
 + (u_int8_t)weekdayMaskFromWeekdaysArray:(NSArray <NSString *> *)weekdaysArray {
-    return [self weekdayNamesWithLocale:nil];
+    return [self weekdayMaskFromWeekdaysArray:weekdaysArray locale:nil];
 }
 
 + (u_int8_t)weekdayMaskFromWeekdaysArray:(NSArray <NSString *> *)weekdaysArray locale:(NSLocale *)locale {
