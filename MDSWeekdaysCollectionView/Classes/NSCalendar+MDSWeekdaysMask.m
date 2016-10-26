@@ -29,6 +29,16 @@ static NSString * const MDSWeekdaysLocale = nil;
     return [NSCalendar sharedGregorianCalendar].weekdaySymbols;
 }
 
++ (NSArray <NSString *> *)weekdayNamesWithLocale:(NSLocale *)locale {
+    return [self calendarWithLocale:locale].weekdaySymbols;
+}
+
++ (NSCalendar *)calendarWithLocale:(NSLocale *)locale {
+    NSCalendar *calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    calendar.locale = locale;
+    return calendar;
+}
+
 + (NSArray <NSString *> *)shortWeekdayNames {
     return [NSCalendar sharedGregorianCalendar].shortWeekdaySymbols;
 }
@@ -38,10 +48,21 @@ static NSString * const MDSWeekdaysLocale = nil;
 }
 
 + (u_int8_t)weekdayMaskFromWeekdaysArray:(NSArray <NSString *> *)weekdaysArray {
+    return [self weekdayNamesWithLocale:nil];
+}
+
++ (u_int8_t)weekdayMaskFromWeekdaysArray:(NSArray <NSString *> *)weekdaysArray locale:(NSLocale *)locale {
     u_int8_t weekdayMask = 0;
     
+    NSArray *weekdayNames = locale ? [self weekdayNamesWithLocale:locale] : [self weekdayNames];
+    
+    NSMutableArray *lowerCaseNames = [NSMutableArray arrayWithCapacity:weekdayNames.count];
+    for (NSString *weekdayName in weekdayNames) {
+        [lowerCaseNames addObject:weekdayName.lowercaseString];
+    }
+    
     for (NSString *weekdayName in weekdaysArray) {
-        NSInteger weekday = [[self weekdayNames] indexOfObject:weekdayName.capitalizedString];
+        NSInteger weekday = [lowerCaseNames indexOfObject:weekdayName.lowercaseString];
         weekdayMask |= 1 << weekday;
     }
     
@@ -49,7 +70,11 @@ static NSString * const MDSWeekdaysLocale = nil;
 }
 
 + (NSArray <NSString *> *)weekdaysForMask:(u_int8_t)mask {
-    NSArray <NSString *> *weekdayNames = [NSCalendar sharedGregorianCalendar].weekdaySymbols;
+    return [self weekdaysForMask:mask locale:nil];
+}
+
++ (NSArray <NSString *> *)weekdaysForMask:(u_int8_t)mask locale:(NSLocale *)locale {
+    NSArray <NSString *> *weekdayNames = locale ? [self weekdayNamesWithLocale:locale] : [NSCalendar sharedGregorianCalendar].weekdaySymbols;
     
     NSMutableArray *currentWeekdaysArray = [NSMutableArray arrayWithCapacity:weekdayNames.count];
     

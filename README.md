@@ -39,7 +39,7 @@ Assign `MDSWeekdaysCollectionViewDelegate` to `weekdaysDelegate` property and re
 
 ## Author
 
-Modus, mod.us
+Modus Group LLC, mod.us
 
 ## License
 
