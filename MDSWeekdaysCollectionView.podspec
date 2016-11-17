@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MDSWeekdaysCollectionView'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'CollectionView subcluss to work with weekdays selection'
   s.description      = 'Convenient collection view subclass to work with weekdays selection, providing such features like weekdays binary mask'
 
@@ -18,11 +18,11 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.homepage         = 'https://github.com/JJCOINCWEBDEV/MDSWeekdaysCollectionView'
+  s.homepage         = 'https://github.com/rubyroyd/MDSWeekdaysCollectionView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Modus' => 'mod.us' }
-  s.source           = { :git => 'https://github.com/JJCOINCWEBDEV/MDSWeekdaysCollectionView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/rubyroyd/MDSWeekdaysCollectionView.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
